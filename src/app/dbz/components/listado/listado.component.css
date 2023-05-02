@@ -1,0 +1,12 @@
+.mouse-over{
+    background-image: linear-gradient(to left,aqua 50%, white 50%);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: background-position 0.25s, color 0.5s, font-size 0.5s;
+}
+.mouse-over:hover {
+    background-position: right;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+}
