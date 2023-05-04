@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col">
-        <dbz-listado [personajes]="dbzService.personajes" (onDeletePersonaje)="deletePersonaje($event)"></dbz-listado>
+        <dbz-listado [personajes]="personajes" (onDeletePersonaje)="deletePersonaje($event)"></dbz-listado>
     </div>
     <div class="col">
         <dbz-agregar (onNewPersonaje)="addPersonaje($event)"></dbz-agregar>

@@ -10,13 +10,13 @@ export class ListadoComponent implements OnInit {
     @Input() 
     personajes: Personaje[] = [];
     @Output('onDeletePersonaje')
-    deleteEmitter: EventEmitter<number> = new EventEmitter;
+    deleteEmitter: EventEmitter<string> = new EventEmitter;
 
     constructor() { }
 
     ngOnInit(): void { }
 
-    emitIndexToDelete(index:number): void {
-        this.deleteEmitter.emit(index);
+    emitIndexToDelete(id: string): void {
+        this.deleteEmitter.emit(id);
     }
 }

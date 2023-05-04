@@ -8,15 +8,20 @@ import { DBZService } from '../services/dbz.service';
     styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-    constructor(public dbzService: DBZService) { }
+    personajes: Personaje[];
 
-    ngOnInit(): void { }
+    constructor(private dbzService: DBZService) { 
+        this.personajes = this.dbzService.getPersonajes();
+    }
+
+    ngOnInit(): void {
+     }
 
     addPersonaje(personaje: Personaje): void {
         this.dbzService.addPersonaje(personaje);
     }
 
-    deletePersonaje(index:number): void {
-        this.dbzService.removePersonaje(index)
+    deletePersonaje(id: string): void {
+        this.dbzService.removePersonaje(id);
     }
 }
