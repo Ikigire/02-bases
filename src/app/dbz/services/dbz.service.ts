@@ -31,6 +31,6 @@ export class DBZService {
     }
 
     getPersonajes(): Personaje[] {
-        return [...this.personajes];
+        return this.personajes;
     }
 }
